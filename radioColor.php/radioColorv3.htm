@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!--link ha mejorar...-->
+<script> 
+	function cambiaColor(){ 
+   	 
+   		for (var i=0; i<document.coloreando.color.length;i++){ 
+      		if (document.coloreando.color[i].checked) 
+         	break; 
+   		}
+		//aqui solo se esta enviando el id el color encontrado segun el radio que se escogio siguiendo el value que poseen
+   		document.getElementById('1').style.backgroundColor = document.coloreando.color[i].value
+	} 
+</script>
+</head>
+<!--Empesamos con el Cuerpo o Body-->
+<body>
+	<form name=coloreando>
+    
+	<p><input  type="radio" 
+		name="color" 
+		value="Red" checked 
+	 	/>
+ 		Rojo </p> 
+	<!--aqui es necesario, Un Unico Nombre(name) para que no se seleccione como lista los radios-->
+	<!--el checked solo se esncarga de poner la seleccion al primero al que se dese-->
+	<!--en la funcion se utilizara el value junto con el checked-->
+	<p><input  type="radio" 
+		name="color" 
+		value="Blue" 
+		 />
+ 		Azul </p>
+
+	<p><input  type="radio" 
+		name="color" 
+		value="Green" 
+	  	/>
+ 		Verde </p>
+
+	<p><input  type="radio" 
+		name="color" 
+		value="Yellow" 
+		/>
+ 		Amarillo  </p>
+	<br>
+	<!--creamos el boton, no se utilizara un name aqui-->
+	<!--y al momento de hacer click se llamara a la funcion-->
+	<input type="Button" name="" value="Cambia Color" onclick="cambiaColor()"> 
+	<div align="center">
+	<!--creamos la tabla con el id al cual llamaremos para cambiar el Color Mediante el Boton-->
+	<table id=1 width="150px" height="100px" border="1">
+		<tr>
+			<td>&nbsp;</td>
+  		</tr>
+	</table>
+ 	.-----. .-----. </div>
+    
+	</form>
+	<!--y se cierra el Form/ Finalizado Crasmic -->
+
+	<script src="js/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/actua.js"></script>
+</body>
+</html>
