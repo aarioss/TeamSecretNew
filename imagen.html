@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/imagen.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <label class="radio-inline"><!-- radio-inline: clase de bootstrap para grupo de radio buttons -->
+                <input name="radioGroup" id="radio1" value="option1" type="radio" onclick="mostrarImagen()">
+                Mostrar
+            </label>
+        </div>
+        <div class="row">
+            <label class="radio-inline">
+                <input name="radioGroup" id="radio2" value="option2" type="radio" onclick="ocultarImagen()">
+                Ocultar
+            </label>
+        </div>
+        <!-- Clase hidden: clase de bootstrap que hace que el div se esconda -->
+        <div id="my-img" class="hidden"> 
+            <img src="img/SDC10158.JPG" id="img" style="height: 150px; width: 446px;"  />
+        </div>
+    </div>
+</body>
+</html>
