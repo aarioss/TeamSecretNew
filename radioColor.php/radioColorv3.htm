@@ -5,8 +5,14 @@
 	<!-- usar js-->
     	<meta charset="UTF-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="js/jquery/jquery.js"></script>
-    	<script src="js/actua.js"></script>
+    	
+	<!--en caso en el que la carpeta este fuera y no Dentro-->
+    	<!--<script src="../js/jquery/jquery-1.12.3.js"></script>-->
+    	<!--<script src="../js/actua.js"></script>-->
+    	
+    	<!--en caso en el que la carpeta este Dentro-->
+    	<script src="js/jquery/jquery-1.12.3.js"></script>
+	<script src="js/actua.js"></script>
 	<!--link ha mejorar...-->
 <script> 
 	function cambiaColor(){ 
@@ -64,55 +70,61 @@
     
 	</form>
 	<!--y se cierra el Form/ Finalizado Crasmic -->
-	<form id=f_crear_persona>
+	    <!--inicio de nueva tarea Unsertando usuarios-->
+	<form id="f_crear_persona">
     
-    	<lavel for="i_ci">Ci:</lavel>
+    	<label for="i_ci">Ci:</label>
         <input type="number" id="i_ci" required />
         
-        <lavel for="s_exp">Expedido</label>
-        <select id="s_exp">
-        	<<option value="value1" selected>Cbba</option> 
-  			<option value="value2">Sucre</option>
-  			<option value="value3">La Paz</option>
-            <option value="value4">oruro</option>
-            <option value="value5">Pando</option>
-            <option value="value6">Beni</option>
-            <option value="value7">Tarija</option>
-			<option value="value8">Santa Cruz</option>
-            <option value="value9">Potosi</option>
+        <label for="i_exp">Expedido</label>
+        <select  id="i_exp">
+        	<option >Cochabamba</option> 
+  			<option >Sucre</option>
+  			<option >La Paz</option>
+            <option >oruro</option>
+            <option >Pando</option>
+            <option >Beni</option>
+            <option selected>Tarija</option>
+			<option >Santa Cruz</option>
+            <option >Potosi</option>
         </select>
-        
-        <div style="display:block; height: 3px;"></div>
-        <label for="i_nombres">Nombres</label>
+        <!--NOMBRE-->
+        <div style="display: block; height: 3px;"></div>
+        <label for="i_nombres">Nombres : </label>
         <input type="text" id="i_nombres"/>
-        
+        <!--APELLIDO PATERNO-->
         <div style="display:block; height: 3px;"></div>
-        <label for="i_apellido_p">apellidoPaterno</label>
+        <label for="i_apellido_p">Apellido Paterno : </label>
+        <input type="text" id="i_apellido_p"/>
+        <!--APELLIDO MATERNO-->
+        <div style="display:block; height: 3px;"></div>
+        <label for="i_apellido_m">Apellido Materno : </label>
         <input type="text" id="i_apellido_m"/>
-        
+        <!--CORREO O EMAIL-->
         <div style="display:block; height: 3px;"></div>
-        <label for="i_apellido_m">apellidoMaterno</label>
-        <input type="text" id="i_apellido_m"/>
-        
-        <div style="display:block; height: 3px;"></div>
-        <label for="i_email">CorreoElectronico</label>
+        <label for="i_email">Correo Electronico : </label>
         <input type="email" id="i_email"/>
-        
+        <!--TELEFONO O CELULAR-->
         <div style="display:block; height: 3px;"></div>
-        <label for="i_tel_cel">tel cel:</label>
-        <input type="text" id="i_tel_cel" />
-        
+        <label for="i_tel_cel">Tel/cel : </label>
+        <input type="number" id="i_tel_cel" />
+        <!--enviamos o restauramos el formulario-->
         <div style="display:block; height: 3px;"></div>
         <input type="reset" value="Limpiar">
         <input type="submit" value="Crear"/>
     </form>
-    <div>
-    	<p><b>Nombre:</b><span id="s_nombre"></span> <b> Ci: </b><span id="i_ci"></span></p>
-        <p><b>Apellido p:</b><span id="i_apellido_p"></span> </b> <b>apellidoM:</b><span id="i_apellido_m"></span></p>
-        <p><b>email</b><span id="i_email"></span></p>
-        <p><b>tel. Cel:</b><span id="i_tel_cel"></span></p>
+    <!--Asignamos valores en el div utilizando span con id's correspondiente's-->
+    <div >
+    	<p><b>Nombre : </b> <span id="s_nombre"></span> <b>Ci : </b><span id="s_ci"></span></p>
+        <p><b>Apellido Pat : </b><span id="s_apellido_p"></span> <b>apellido Mat : </b> <span id="s_apellido_m"></span></p>
+        <p><b>Email(Correo) : </b><span id="s_email"></span></p>
+        <p><b>Tel/Cel : </b><span id="s_tel_cel"></span></p>
+        
+        <p><b>Expedido</b> <span id="s_exp"></p>
     </div>
-    <!-- hata aqui-->
+    <!--Finaliza tarea Insertando Usuarios Al Div con jquery y una funcion llamando debidamente-->
+    <!--Finalizado 2 Crasmic-->
+    <!-- hasta aqui-->
     
 	<script src="js/jquery.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
