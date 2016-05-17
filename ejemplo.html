@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario</title>
+    <meta charset="utf-8">
+   
+</head>
+ 
+<body>
+    <div id="registrar">
+            <a href="../index.php"</a>Crear Persona</a>
+    </div>
+    <div id="envoltura">
+        <div id="contenedor">
+ 
+            <div id="cabecera">
+                
+            </div>
+ 
+            <div id="cuerpo">
+
+                <form id="form-login" action="#" method="post" >
+                    <p><label for="CI">CI:</label></p>
+                        <input name="CI" type="text" id="CI" class="CI" placeholder="Pon tu CI" autofocus=""/ ></p>
+
+ <select>
+<option>cochabamba</option>
+<option>beni</option>
+<option>la paz</option>
+<option>santa cruz</option>
+<option>pando</option>
+<option>oruro</option>
+<option>sucre</option>
+<option>tarija</option>
+<option>potosi</option>
+<select>
+
+
+                <form id="form-login" action="#" method="post" >
+                    <p><label for="i_nombres">nombre:</label></p>
+                        <input name="nombre" type="text" id="nombre" class="nombre" placeholder="Pon tu nombre" autofocus=""/ ></p>
+ 
+       
+                    <p><label for="apellidos">Apellido Paterno:</label></p>
+                   <input name="apellidosPaterno" type="text" id="apellidoPaterno" class="apellidoPaterno" placeholder="Pon tus apellidoPaterno" /></p>
+                    <p><label for="apellidos">Apellido Materno:</label></p>
+                        <input name="apellidosMaterno" type="text" id="apellidosMaterno" class="apellidosMaterno" placeholder="Pon tus apellidosMaterno" /></p>
+                  
+ 
+                    <p><label for="correo">Correo:</label></p>
+                        <input name="correo" type="text" id="correo" class="correo" placeholder="Pon tu mail" /></p>
+ 
+                    <p><label for="pass">Telefono:</label></p>
+                        <input name="Telefon" type="Telefon" id="pass" class="Telefono" placeholder="Pon tu Telefono"/ ></p>
+ 
+                   
+ 
+                    <p id="bot"><input name="submit" type="submit" id="boton" value="crear" class="boton"/></p>
+                </form>
+            </div>
+ 
+        <input type="button" value="Limpiar" onclick="Limpiar()"> 
+
+</div>
+<p><b>Ci:<span id="s_ci"></span></b>   <p><b>Expedido:<span id="s_exp"></span></b>
+ 		<p><b>Nombre:<span id="s_nombres"></span></b>
+ 		<p><b>Apellido Paterno:<span id="s_apellido_p"></span></b>
+ 		<p><b>Apellido Materno:<span id="s_apellido_m"></span></b>
+ 		<p><b>Email:<span id="s_email"></span></b>
+ 		<p><b>Telefono Celular:<span id="s_tel_cel"></span></b>
+</div>
+</body>
+ +</html>
+View 2,276  js/bootstrap.js
+2,276 additions, 0 deletions not shown because the diff is too large. Please use a local Git client to view these changes.
+View 6  js/bootstrap.min.js
+Diff suppressed. Click to show.
+View 30  js/func.js
+@@ -0,0 +1,30 @@
+ $ ( document ).ready(function(){
+ 	$("#f_crear_persona").submit(function(event){
+ 		$("#s_nombres").empty();
+ 		$("#s_nombres").append($("#i_nombres").val());
+ 
+ 		$("#s_ci").empty();
+ 		$("#s_ci").append($("#i_ci").val());
+ 
+ 		$("#s_exp").empty();
+ 		$("#s_exp").append($("#i_exp").val());
+  		$("#s_apellido_p").empty();
+ 		$("#s_apellido_p").append($("#i_apellido_p").val());
+ 
+ 		$("#s_apellido_m").empty();
+ 		$("#s_apellido_m").append($("#i_apellido_m").val());
+ 
+ 		$("#s_email").empty();
+ 		$("#s_email").append($("#i_email").val());
+ 
+ 		$("#s_tel_cel").empty();
+ 		$("#s_tel_cel").append($("#i_tel_cel").val());
+ 
+ 	
+ 
+ 		event.preventDefault();
+ 	})
+ 
+ });
+ 
