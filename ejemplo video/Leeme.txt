@@ -1,0 +1,17 @@
+	
+
+	http://www.mirovideoconverter.com
+	http://www.movavi.com/es/videoconverter/
+
+	Formatos web:
+		 mp4 - ogv - webm
+
+	Atributos de la etiqueta video:
+	- controls
+	- autoplay == Inicia automaticamente
+	- Loop == Reinicia y vuelve a ejecutarse de manera indefinida
+	- preload == Evita tiempos de espera
+	- poster == para colocar imagenes al video
+	- width
+	- heigth
+
