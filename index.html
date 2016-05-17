@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>combo</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale1.0">
+	<script src="js/bootstrap"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/func.js"></script>	
+</head>
+<body>	
+	<br/><br/><br/><br/>
+
+	<center>
+	<form id="f_crear_persona">
+		<table>
+			<tr>
+				<td><label for="ci">CI:</label></td>
+				<td><input type="number" id ="i_ci" ></td>
+				<td><label for="s_exp">Expedido:</label></td>
+				<td>			
+					<select id="i_exp" style >
+						<option value="cbba">Cochabamba</option>
+						<option value="stc">Santa Cruz</option>
+						<option value="lp">La Paz</option>
+						<option value="oru">Oruro</option>
+						<option value="pts">Potosi</option>
+						<option value="ben">Beni</option>
+						<option value="pan">Pando</option>
+						<option value="chu">Chuquisaca</option>
+						<option value="tar">Tarija</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="i_nombres">Nombres:</label></td>
+				<td><input type="text" id ="i_nombres" ></td>
+			</tr>
+
+			<tr>
+				<td><label for="i_apellido_p">Apellido Paterno:</label></td>
+				<td><input type="text" id ="i_apellido_p" ></td>
+			</tr>
+
+			<tr>
+				<td><label for="i_apellido_m">Apellido Materno:</label></td>
+				<td><input type="text" id ="i_apellido_m" ></td>
+			</tr>
+
+			<tr>
+				<td><label for="i_email">Email:</label></td>
+				<td><input type="text" id ="i_email" ></td>
+			</tr>
+
+			<tr>
+				<td><label for="i_tel_cel">Telefono Celular:</label></td>
+				<td><input type="text" id ="i_tel_cel" ></td>
+			</tr>
+					
+			<tr>
+				<td><input type="reset" value ="Limpiar"/></td>
+				<td><input type="submit" value ="Crear"/></td>
+			</tr>
+		</table>			
+	</form>
+	</center>
+	<div>
+		<p><b>Ci:<span id="s_ci"></span></b>   <p><b>Expedido:<span id="s_exp"></span></b>
+		<p><b>Nombre:<span id="s_nombres"></span></b>
+		<p><b>Apellido Paterno:<span id="s_apellido_p"></span></b>
+		<p><b>Apellido Materno:<span id="s_apellido_m"></span></b>
+		<p><b>Email:<span id="s_email"></span></b>
+		<p><b>Telefono Celular:<span id="s_tel_cel"></span></b>	
+	</div>
+</body>
+</html>
