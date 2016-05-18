@@ -25,4 +25,13 @@ $(document).ready(function() {
 		event.preventDefault();
 		
 	})
+	function cambiaColor(){ 
+   	 	//fucnion del Archivo RadioColor.htm
+   		for (var i=0; i<document.coloreando.color.length;i++){ 
+      		if (document.coloreando.color[i].checked) 
+         	break; 
+   		}
+		//aqui solo se esta enviando el id el color encontrado segun el radio que se escogio siguiendo el value que poseen
+   		document.getElementById('1').style.backgroundColor = document.coloreando.color[i].value
+	} 
 });
