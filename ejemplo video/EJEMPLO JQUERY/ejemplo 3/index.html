@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>JQuery Cycle Plugin - Basic Demo</title>
+<style type="text/css">
+.slideshow { height: 332px; width: 832px; margin: auto }
+.slideshow img { padding: 15px; border: 1px solid #ccc; background-color: #eee; }
+
+.slideshow2 { height: 332px; width: 832px; margin: auto }
+.slideshow2 img { padding: 15px; border: 1px solid #ccc; background-color: #eee; }
+
+</style>
+<!-- include jQuery library -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<!-- include Cycle plugin -->
+<script type="text/javascript" src="js/cycle.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    	
+	$('.slideshow').cycle({
+		fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+	});
+	
+	  $('.slideshow2').cycle({
+		fx: 'scrollRight' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<div class ="slideshow">
+<img src="images/foto1.jpg" width="800" height="300">
+<img src="images/foto2.jpg" width="800" height="300">
+<img src="images/foto3.jpg" width="800" height="300">
+</div>
+<br>
+<div class ="slideshow2">
+<img src="images/foto1.jpg" width="800" height="300">
+<img src="images/foto2.jpg" width="800" height="300">
+<img src="images/foto3.jpg" width="800" height="300">
+</div>
+
+
+</body>
+</html>
