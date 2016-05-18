@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!--<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+    <!-- usar js-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<!--en caso en el que la carpeta este fuera y no Dentro-->
+    <!--<script src="../js/jquery/jquery-1.12.3.js"></script>-->
+    <!--<script src="../js/actua.js"></script>-->
+    <!--en caso en el que la carpeta este Dentro-->
+    <script src="assets/js/jquery/jquery.js"></script>
+	<script src="assets/js/main.js"></script>
+	
+	<!--link o Direcciones ha mejorar...-->
+
+</head>
+<!--Empesamos con el Cuerpo o Body-->
+<body>
+	<form name=coloreando>
+    
+	<p><input  type="radio" 
+		name="color" 
+		value="Red" checked 
+	 	/>
+ 		Rojo </p> 
+	<!--aqui es necesario, Un Unico Nombre(name) para que no se seleccione como lista los radios-->
+	<!--el checked solo se esncarga de poner la seleccion al primero al que se dese-->
+	<!--en la funcion se utilizara el value junto con el checked-->
+	<p><input  type="radio" 
+		name="color" 
+		value="Blue" 
+		 />
+ 		Azul </p>
+
+	<p><input  type="radio" 
+		name="color" 
+		value="Green" 
+	  	/>
+ 		Verde </p>
+
+	<p><input  type="radio" 
+		name="color" 
+		value="Yellow" 
+		/>
+ 		Amarillo  </p>
+	<br>
+	<!--creamos el boton, no se utilizara un name aqui-->
+	<!--y al momento de hacer click se llamara a la funcion-->
+	<input type="Button" name="" value="Cambia Color" onclick="cambiaColor()"> 
+	<div align="center">
+	<!--creamos la tabla con el id al cual llamaremos para cambiar el Color Mediante el Boton-->
+	<table id=1 width="150px" height="100px" border="1">
+		<tr>
+			<td>&nbsp;</td>
+  		</tr>
+	</table>
+ 	.-----. .-----. </div>
+    
+	</form>
+	<!--y se cierra el Form/ Finalizado Crasmic -->
+    
+    
+    <!--inicio de nueva tarea Unsertando usuarios-->
+	<form id="f_crear_persona">
+    
+    	<label for="i_ci">Ci:</label>
+        <input type="number" id="i_ci" required />
+        
+        <label for="i_exp">Expedido</label>
+        <select  id="i_exp">
+        	<option >Cochabamba</option> 
+  			<option >Sucre</option>
+  			<option >La Paz</option>
+            <option >oruro</option>
+            <option >Pando</option>
+            <option >Beni</option>
+            <option selected>Tarija</option>
+			<option >Santa Cruz</option>
+            <option >Potosi</option>
+        </select>
+        <!--NOMBRE-->
+        <div style="display: block; height: 3px;"></div>
+        <label for="i_nombres">Nombres : </label>
+        <input type="text" id="i_nombres"/>
+        <!--APELLIDO PATERNO-->
+        <div style="display:block; height: 3px;"></div>
+        <label for="i_apellido_p">Apellido Paterno : </label>
+        <input type="text" id="i_apellido_p"/>
+        <!--APELLIDO MATERNO-->
+        <div style="display:block; height: 3px;"></div>
+        <label for="i_apellido_m">Apellido Materno : </label>
+        <input type="text" id="i_apellido_m"/>
+        <!--CORREO O EMAIL-->
+        <div style="display:block; height: 3px;"></div>
+        <label for="i_email">Correo Electronico : </label>
+        <input type="email" id="i_email"/>
+        <!--TELEFONO O CELULAR-->
+        <div style="display:block; height: 3px;"></div>
+        <label for="i_tel_cel">Tel/cel : </label>
+        <input type="number" id="i_tel_cel" />
+        <!--enviamos o restauramos el formulario-->
+        <div style="display:block; height: 3px;"></div>
+        <input type="reset" value="Limpiar">
+        <input type="submit" value="Crear"/>
+    </form>
+    <!--Asignamos valores en el div utilizando span con id's correspondiente-->
+    <div >
+    	<p><b>Nombre : </b> <span id="s_nombre"></span> <b>Ci : </b><span id="s_ci"></span></p>
+        <p><b>Apellido Pat : </b><span id="s_apellido_p"></span> <b>apellido Mat : </b> <span id="s_apellido_m"></span></p>
+        <p><b>Email(Correo) : </b><span id="s_email"></span></p>
+        <p><b>Tel/Cel : </b><span id="s_tel_cel"></span></p>
+        
+        <p><b>Expedido</b> <span id="s_exp"></p>
+    </div>
+    <!--Finaliza tarea Insertando Usuarios Al Div con jquery y una funcion llamando debidamente-->
+    <!--Finalizado 2 Crasmic-->
+    	<form>
+		<p>Ejemplo Html5: pattern - placeholder</p>
+		<input type="text" id="ejemplo" name="ejemplohtml5" pattern="\S{6,12}" placeholder="solo caracteres de 6 - ah 12">
+		<input type="submit">
+	</form>
+
+	<!--<script src="js/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/actua.js"></script>-->
+</body>
+</html>
