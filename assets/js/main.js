@@ -90,3 +90,13 @@ function cambiaColor(){
    		document.getElementById('1').style.backgroundColor = document.coloreando.color[i].value
 	} 
 
+function mostrarImagen() {
+    $("#my-img").removeClass('hidden')
+}
+
+function ocultarImagen() {
+    $("#my-img").addClass('hidden')
+
+}
+	
+
