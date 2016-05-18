@@ -121,9 +121,70 @@
 		<input type="text" id="ejemplo" name="ejemplohtml5" pattern="\S{6,12}" placeholder="solo caracteres de 6 - ah 12">
 		<input type="submit">
 	</form>
+	<!--Finalizado 3 Crasmic-->
+	
+	<!--Ejemplo Jquery-->
+    <!--innerwidth()-->
+    <script>
+	$(document).ready(function(){
+ 		$("#boton").click(function(){
+    		alert('El ancho del div es de: ' + $("#parrafo").innerWidth() + 'pixels');
+		}); 
+	});
+	</script>
+	<div >
+		<p id="parrafo" 
+        style="width:180px; 
+        padding: 0 5px 0 5px;">
+        190=
+        se debe a la suma de los 180 del párrafo más los 5+5 del padding.	
+        </p>
+	</div>
+	<p><input id="boton" type="button" value="Obtener ancho"></p>
+    <!--outerWidth()-->
+    <script>
+	$(document).ready(function(){
+ 		$("#boton2").click(function(){
+    		alert('El ancho del div es de: ' + $("#parrafo2").outerWidth() + 'pixels');
+		}); 
+	});
+	</script>
+	<div >
+		<p id="parrafo2" style="width:180px; padding: 0 5px 0 5px; border: 2px solid;">194= debe a la suma de los 180 del párrafo más los 5+5 del padding y los 2 + 2 del ancho del borde.</p>
+	</div>
+    <p><input id="boton2" type="button" value="Obtener alto"></p>
+    
+    
+    <!--ejemplo de blur()-->
+     <!--detectamos la pérdida del foco en el elemento con id = ‘texto n’-->
+   	 	<!--Texto 1-->
+   	<!--Posteriormente ejecutamos la función de jQuery css() y le damos un fondo gris al input.-->
+    
+   		<!--Texto 2-->
+	<!--Posteriormente ejecutamos la función de jQuery hide() y hacemos desaparecer el input.-->
+    <script>
+	    	$(document).ready(function()
+			{
+			$("#texto1").blur(function(){
+	    			$(this).css("background-color", "#FFFFCC");
+			});
+ 
+			$("#texto2").blur(function(){
+				$(this).hide("slow");
+			});
+		});
+	</script>
+    	<input type="text" id="texto1" value="Primer textbox">
+ 
+		<input type="text" id="texto2" value="Segundo textbox">
+    
+ 	<!--Finalizado 4 Crasmic-->
 
 	<!--<script src="js/jquery.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="js/actua.js"></script>-->
+	
+	
+	
 </body>
 </html>
