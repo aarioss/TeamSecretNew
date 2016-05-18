@@ -1,0 +1,88 @@
+/*
+Reglas para trabajar con css
+1) Primero se definen los estilos para EQTIQUETAS html, ejem: header, div, a, p, etc.
+
+2) Despues se definen los estilos para IDENTIFICADORES (id), los id's son elementos unicos en el html,
+	en el css se declara con el simbolo de # ejem: #nombre-id {estilos} y en el aributo html se llaman
+	mediante el atributo id ejem: <div id="publicidad"></div>
+3) Al final se definen los estilos para las clases(class), las clases son elementos que se pueden
+	repetir n veces en el html, en el css se declara con el simbolo de punto (.) ejem: .nombre-clase{estilos}
+	y en el html se llaman mediante el atributo class, ejem: <div class="borde-logos"></div>
+
+4) Todos los estilos se ordenan conforme van a pareciendo en la disposicion del html, teniendo en cuenta la prioridad anterior,
+	es decir, primero etiquetas html, luego id's y al final clases.
+	
+5) Los atributos se declaran de la siguiente forma: {atributo1:valor1; atributo2:valor2;...atributoN:valorN;}
+
+6) Todos los atribitos se ordenan alfabeticamente, por ejem: sitengo width, color, display, etonces
+	el orden seria: primero color, luego display y al final width.
+	
+7) Si tenemos estilos para el comodin *, o para las etiquetas html y/o body, estos estilos son los primeros en definirse.
+
+8) En el body debemos declarar un tamano de fuente global
+
+9) Si tenemos estilos para resetear elementos html, estos iran antes de cualquier estilo.
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+@font-face {
+    font-family: "seasideresortnfregular";
+    src: url("../fonts/seasrn__-webfont.woff2") format("woff2"),
+         url("../fonts/seasrn__-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+/*16px = 12pt = 100% = 1em*/
+body{
+	background: #212121 url(../img/fondo.jpg);
+	color: #fff;
+	font-family: "seasideresortnfregular", Helvetica, Verdana;
+	font-size: 2em;
+}
+h1{
+	color: #f60;
+	margin: 0.25em auto;
+	text-align: center;
+	text-shadow: 5px 5px 10px rgba(255,255,255,0.5);
+}
+header, nav, footer{
+	background: #1e6381;
+	border-radius: 0.5em;
+	margin: 0.5em auto;
+	max-width: 960px;
+	padding: 0.25em;
+	text-align: center;
+}
+section#contenedor{
+	margin: 0.5em auto;
+	max-width: 960px;
+	padding: 0;
+	text-align: center;
+}
+section#principal, aside{
+	background: #1e6381;
+	border-radius: 0.5em;
+	display: inline-block;
+	margin: 0.25em auto;
+	max-width: 960px;
+	min-height: 455px;
+	padding: 0.25em;
+	text-align: center;
+	vertical-align: top;
+	width: 65%;	
+}
+article{
+	background: #011e30;
+	border-radius: 0.5em;
+	min-height: 140px;
+	padding: 0.25em;
+}
+video,audio{
+	max-width: 100%;
+}
+aside{
+	width: 30%;
+}
