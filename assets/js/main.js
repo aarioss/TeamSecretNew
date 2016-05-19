@@ -24,6 +24,9 @@ $ ( document ).ready(function(){
 		event.preventDefault();
 	})
 
+    //Contar elementos
+	var elementCount = $("#test").find("*").css("border", "3px solid red").length;
+	$("#elementos").prepend("<h4>" + elementCount + " elementos encontrados</h3>");
 });
 
 function addLi(){
