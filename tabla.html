@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta name= "viewport" content="width=device-width, initial-scale=1.0"/>
+<script src="assets/js/jquery/jquery.js"></script>
+<script src="assets/js/main.js"></script>
+<link rel="Stylesheet" href="assets/css/main.css" />
+</head>	
+<body>
+<div> Tabla Productos </div> 
+<a href="#" onclick="agregarFila()">Agregar Producto</a>
+<table class="tablaPro" id= "t_productos">
+    <thead>
+        <tr> 
+            <td>Producto</td>
+            <td>Cantidad</td>
+            <td>Precio</td>
+            <td>Total</td>
+            <td>Acciones</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><input type="text" value="Coca cola 2L" /></td>
+            <td><input type="number" onkeydown="calcularTotalCant(this)" value="2" /></td>    <!--No se si es el evento correcto -->
+            <td><input type="number" onkeydown="calcularTotalPrecio(this)" value="6.5" /></td> <!--No se si es el evento correcto -->
+            <td><input type="number" value="13" readonly /></td>
+            <td>
+                <a href="#" onclick= "copiarFila(this)"><img src ="assets/img/copiar.JPG" /></a>
+                <a href="#" onclick= "borrarFila(this)"><img src ="assets/img/borrar.JPG" /></a>
+            </td>
+        </tr>
+     </tbody>           
+</table>
+</body> 
+
+</html>
+ 

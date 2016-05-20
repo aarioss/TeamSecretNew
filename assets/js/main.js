@@ -101,5 +101,84 @@ function ocultarImagen() {
     $("#my-img").addClass('hidden')
 
 }
-	
+
+
+
+
+// FUNCIONES DE LA TABLA 
+function borrarFila(link) {
+    var tr = $(link).parent().parent();
+    $(tr).remove();
+
+}
+
+function agregarFila(link) {
+    $("#t_productos").append(addFila("", "", "", ""));
+}
+
+function copiarFila(link) {
+    var tr = $(link).parent().parent();
+    $("#t_productos").append(addFila(getNombre(tr), getCantidad(tr), getPrecio(tr), getTotal(tr)));
+}
+
+function getNombre(tr) {
+    return $(tr).find("td").children().val();
+}
+
+function getCantidad(tr) {
+    return $(tr).find("td").next().children().val();
+}
+
+function getPrecio(tr) {
+    return $(tr).find("td").next().next().children().val();
+}
+
+function getTotal(tr) {
+    return $(tr).find("td").next().next().next().children().val();
+}
+
+function addFila(nombre, cantidad, precio, total) {
+
+    var html = "<tr>";
+    html += "<td><input type='text' value='" + nombre +"'/></td>";
+    html += "<td><input type='number' onkeydown='calcularTotalCant(this)' value='"+cantidad+"'/></td>";
+    html += "<td><input type='number' onkeydown='calcularTotalPrecio(this)' value='" + precio + "'/></td>"; 
+    html += "<td><input type='number' value='" + total + "' readonly/></td>";
+    html += "<td><a href='#' onclick = 'copiarFila(this) '><img src ='assets/img/copiar.JPG'/></a>";
+    html += "<a href='#' onclick = 'borrarFila(this) '><img src ='assets/img/borrar.JPG'/></a></td>"; 
+    html += "</tr>";
+    return html;
+
+}
+
+function calcularTotalCant(cant) {
+    var cantidad = parseFloat($(cant).val());
+    var precio = parseFloat($(cant).parent().parent().find("td").next().next().children().val());
+    var total = cantidad * precio;
+    $(cant).parent().parent().find("td").next().next().next().children().val(cantidad * precio);
+}
+
+function calcularTotalPrecio(prec) {
+    var precio = parseFloat($(prec).val());
+    var cantidad = parseFloat($(prec).parent().parent().find("td").next().children().val());
+    var total = cantidad * precio;
+    $(prec).parent().parent().find("td").next().next().next().children().val(cantidad * precio);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
