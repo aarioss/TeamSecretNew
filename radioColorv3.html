@@ -179,6 +179,32 @@
 		<input type="text" id="texto2" value="Segundo textbox">
     
  	<!--Finalizado 4 Crasmic-->
+ 	<!--Tabla que Agrega-Copia-Elimina-->
+ 	<a href="#" onClick="cagregarFila(this)">agregar nuev</a>
+    <table width="60"  border="0" class="tablaPro" id="t_productos">
+            <thead>
+                <tr>
+                <th>Producto</th>
+                <th>cantidad</th>
+                <th>precio</th>
+                <th>total</th>
+                <th>aaciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input class="c_nombre" type="text" value="CC-Coca Cola"/> </td>
+                    <td><input class="c_cantidad" type="number" value="2" onKeyUp="ccalcularTotal(this);" onChange="ccalcularTotal(this)" /> </td>
+                    <td><input class="c_precio" type="number" value="5" onKeyUp="ccalcularTotal(this);"/> </td>
+                    <!--<td><input id="p" class="c_precio" type="number" value="5" onKeyUp="ccalcularTotal(c.value,p.value);"/> </td>-->
+                    <td><input class="c_total" type="number" value="ccalcularTotal(this)"/> </td>
+                    <td>
+                    	<a href="#" onClick="ccopiarFila(this)">copiar</a>
+                    </td>
+                    <td><a href="#" onClick="celiminaFila(this)">EliminarFila</a></td>
+                </tr>
+    		</tbody>
+	</table>
 
 	<!--<script src="js/jquery.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
