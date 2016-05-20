@@ -164,6 +164,55 @@ function calcularTotalPrecio(prec) {
     var total = cantidad * precio;
     $(prec).parent().parent().find("td").next().next().next().children().val(cantidad * precio);
 }
+function celiminaFila(link){
+	//alert("Entro a Eliminar");
+	var tr =$(link).parent().parent();
+	$(tr).remove();
+	
+}
+function ccopiarFila(link){
+	//nota las alert tienen Objetivo
+	//alert("entro a copiar");
+	var tr =$(link).parent().parent();
+	//alert($("#t_produtos").append(addFila( getCantidad(tr), getPrecio(tr), getTotal(tr))));
+	$("#t_productos").append(caddFila(getNombre(tr),getCantidad(tr),getPrecio(tr),getTotal(tr)));
+}
+	function getNombre(tr){
+		return $(tr).find("td").children().val();
+	}
+	function getCantidad(tr){
+		return $(tr).find("td").next().children().val();
+	}
+	function getPrecio(tr){
+		return $(tr).find("td").next().next().children().val();
+	}
+	function getTotal(tr){
+		return $(tr).find("td").next().next().next().children().val();	
+	}
+	
+function caddFila(nombre, cantidad, precio , total){
+	//alert(nombre);
+	var html="<tr>";
+	html += "<td><input class='c_nombre' typer='text' value='"+nombre+"'/> </td>";
+	
+	html += "<td> <input class='c_cantidad' type='number' value='"+cantidad+"' /> </td>";
+	html += "<td> <input class='c_precio' type='number' value='"+precio+"' /> </td>";
+	html += "<td> <input class='c_total' type='number' value='"+total+"' /> </td>";
+	html += "<td> <a href='#' onclick='ccopiarFila(this)'>copiar</a>  </td>";
+	html += "<td> <a href='#' onClick='celiminaFila(this)'>Eliminar Fila</a> </td>";
+	html += "</tr>";
+	return html;
+}
+function ccalcularTotal(cant){
+	//revisar aun no suma el total
+	var cantidad=parseFloat($(cant).val());
+	var precio=parseFloat($(cant).parent().parent().find('.c_precio').val());
+	$(cant).parent().parent().find('.c_total').val(candidad*precio);
+
+	}
+function cagregarFila(){
+	$("#t_productos").append(caddFila("","","",""));
+}
 
 
 
