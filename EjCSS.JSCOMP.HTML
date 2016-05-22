@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="assets/js/bootstrab/bootstrap.css" rel="stylesheet">
+    <script src="assets/js/jquery/jquery.js"></script>
+    <script src="assets/js/bootstrab/bootstrap.js"></script>
+    <script src="assets/js/main.js"></script>
+</head>
+<body>
+    <h2 style="color:red">Ejemplo 1 modal js</h2>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" onclick="showAlert()" data-target="#myModal">
+        Abrir modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal</h4>
+                </div>
+                <div class="modal-body">
+                    Ejemplo de como abrir un Modal usando Bootsrap
+     
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="alertCerrar()">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <h2 style="color:red">Ejemplo 2 modal js</h2>
+
+    <!-- Large modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">modal largo</button>
+
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="H1">Modal Largo</h4>
+                </div>
+                <div class="modal-body">
+                    Ejemplo de como abrir un Modal Largo usando Bootsrap
+     
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar cambios</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Small modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">modal pequeno</button>
+
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="H2">Modal pequeno</h4>
+                </div>
+                <div class="modal-body">
+                    Ejemplo de como abrir un Modal Pequeno usando Bootsrap
+     
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <h2 style="color:red">Ejemplo 1 de CSS</h2>
+    <h1>h1. Bootstrap heading <small>Secondary text</small></h1>
+    <h2>h2. Bootstrap heading <small>Secondary text</small></h2>
+    <h3>h3. Bootstrap heading <small>Secondary text</small></h3>
+    <h4>h4. Bootstrap heading <small>Secondary text</small></h4>
+    <h5>h5. Bootstrap heading <small>Secondary text</small></h5>
+    <h6>h6. Bootstrap heading <small>Secondary text</small></h6>
+    <br />
+    <h2 style="color:red">Ejemplo 2 de CSS</h2>
+    <p class="text-left">Texto alineado a la izquierda utilizando bootstrap CSS</p>
+    <p class="text-center">Texto alineado al centro utilizando bootstrap CSS</p>
+    <p class="text-right">Texto alineado a la Derecha utilizando bootstrap CSS</p>
+    <p class="text-justify">Texto justificado</p>
+    <p class="text-nowrap">Texto sin wrap</p>
+
+    <h2 style="color:red">Ejemplo 3 de CSS</h2>
+    <p class="text-lowercase">TEXTO Minuscula</p>
+    <p class="text-uppercase"> TEXto Mayuscula</p>
+    <p class="text-capitalize">las Primeras letras de la palabra en Mayuscula</p>
+
+</body>
+
+</html>

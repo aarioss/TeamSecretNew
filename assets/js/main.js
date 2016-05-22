@@ -156,6 +156,9 @@ function calcularTotalCant(cant) {
     var precio = parseFloat($(cant).parent().parent().find("td").next().next().children().val());
     var total = cantidad * precio;
     $(cant).parent().parent().find("td").next().next().next().children().val(cantidad * precio);
+    $("#s_grantotal").empty();
+    $("#s_grantotal").append()();
+
 }
 
 function calcularTotalPrecio(prec) {
@@ -214,20 +217,17 @@ function cagregarFila(){
 	$("#t_productos").append(caddFila("","","",""));
 }
 
+function granTotal() {
+    var filas = $('#t_productos').find("tbody>tr");
+    var total = 0;
+    $each(filas)
+    $
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Ejemplo del Modal 
+function showAlert(){
+    alert("Se abrirar el modal..");
+}
+function alertCerrar() {
+    alert("Se Cerrara el Modal");
+}
