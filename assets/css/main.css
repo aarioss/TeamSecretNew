@@ -1,0 +1,28 @@
+*{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+@font-face {
+    font-family: 'blade_runner_movie_fontRg';
+    src: url('../fonts/bladrmf_-webfont.woff2') format('woff2'),
+         url('../fonts/bladrmf_-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+h1{
+	color: #CC0000;	
+	font-family: "blade_runner_movie_fontRg",Helvetica,Verdana;
+	
+}
+
+section#principal,aside{
+	background: #212121;
+	border-radius: 0.5em;
+	display: inline-block;
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 0.25em;
+	vertical-align: top;
+	width: 65%;
+}

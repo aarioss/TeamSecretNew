@@ -1,3 +1,9 @@
+
+$(window).load(function(){
+			$(".flexslider").flexslider();
+		});
+/*Funcion para ejecutar el flexsiler*/
+
 $ ( document ).ready(function(){
 	$("#f_crear_persona").submit(function(event){
 		$("#s_nombres").empty();
