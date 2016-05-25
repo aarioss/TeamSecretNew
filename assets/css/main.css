@@ -26,3 +26,32 @@ section#principal,aside{
 	vertical-align: top;
 	width: 65%;
 }
+#navegador ul{
+   list-style-type: none;
+   text-align: center;
+}
+#navegador li{
+   display: inline;
+   text-align: center;
+   margin: 0 10px 0 0;
+}
+#navegador li a {
+   padding: 2px 7px 2px 7px;
+   color: #666;
+   background-color: #eeeeee;
+   border: 1px solid #ccc;
+   text-decoration: none;
+}
+#navegador li a:hover{
+   background-color: #333333;
+   color: #ffffff;
+}
+
+h1#f1{color: #00ff00}
+h2#f2 {color: #dda0dd}
+p#f3 {color: rgb(0,0,255)}
+
+
+#inicio{position: absolute; visibility:visible; left:400px; top:250px; z-index:3;
+background-color:#165480; border-width:4; color:#5FA6D7; border-style:ridge; border-color:#c0c0c0;
+padding:10px}
